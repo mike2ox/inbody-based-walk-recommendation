@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_walking"
+        android:title="@string/menu_walking"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/menu_history"
+        android:title="@string/menu_history"
+        android:orderInCategory="100"/>
+</menu>
