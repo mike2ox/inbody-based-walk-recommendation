@@ -43,30 +43,7 @@ public class LoginActivity extends AppCompatActivity{
         email = User_email.getText().toString();        //edittext로 받은걸 string으로 저장
         password = User_PW.getText().toString();
     }
-   //안드로이드 사이클
-    /*
-    @Override
-    protected void onResume() {
-        super.onResume();
-        registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
-        if (mBluetoothLeService != null) {
-           // final boolean result = mBluetoothLeService.connect(mDeviceAddress);
-            Log.i(TAG, "액티비티가 다시 시작됨");
-        }
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        unregisterReceiver(mGattUpdateReceiver);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        unbindService(mServiceConnection);
-        mBluetoothLeService = null;
-    }*/
 
 
     /* onClick에서 정의한 이름과 똑같은 이름으로 생성 */
@@ -222,7 +199,30 @@ public class LoginActivity extends AppCompatActivity{
             }
         }
     }
+    //안드로이드 사이클
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        /*registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
+        if (mBluetoothLeService != null) {
+           // final boolean result = mBluetoothLeService.connect(mDeviceAddress);
+            Log.i(TAG, "액티비티가 다시 시작됨");
+        }*/
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //unregisterReceiver(mGattUpdateReceiver);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //unbindService(mServiceConnection);
+        //mBluetoothLeService = null;
+    }
 
 }
 
