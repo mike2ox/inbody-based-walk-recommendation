@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moonh.indody_exercise">
 
-    <uses-sdk android:minSdkVersion="21"
-        android:targetSdkVersion="22"/>
+    <uses-sdk android:minSdkVersion="18"
+        android:targetSdkVersion="24"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     
     <!--위에 부분은 gps정보를 가져올 수 있도록 환경을 셋팅 mainia.tistory,com/1153-->
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
     
 
@@ -18,7 +21,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">    <!--애플리케이션의 시작점-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +31,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAlLB36H75NVJbJXFp-KBaQh7_OS-0M6r0"/>
+        <activity android:name ="com.example.moonh.indody_exercise.JoinActivity"/>
+        <activity android:name="com.example.moonh.indody_exercise.MainActivity"/>
+        <activity android:name="com.example.moonh.indody_exercise.WalkingActivity"/>
 
     </application>
 

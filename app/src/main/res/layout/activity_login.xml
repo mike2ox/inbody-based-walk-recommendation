@@ -33,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Input_Pw"
+        android:onClick="bt_Login"
         android:layout_alignStart="@+id/Input_Pw"
         android:layout_marginTop="38dp"
         android:id="@+id/Button_Login" />
@@ -50,6 +51,7 @@
         android:text="Join"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="bt_Join"
         android:id="@+id/Button_Join"
         android:layout_alignBaseline="@+id/Button_Login"
         android:layout_alignBottom="@+id/Button_Login"
